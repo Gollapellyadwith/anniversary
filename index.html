@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary Mom & Dad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Heart Animation -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Happy Wedding Anniversary</h1>
+        <h2>Mom & Dad ❤️</h2>
+        <p class="tagline">Happy married life, forever and always</p>
+        <a href="#gallery" class="btn">View Memories 📸</a>
+    </div>
+
+    <!-- Message Section -->
+    <section class="message">
+        <p>
+            Dear Mom and Dad,<br><br>
+            Your love, care, and togetherness inspire me every single day.
+            Thank you for showing me what true love means.
+            Wishing you many more years of happiness, laughter, and togetherness. 💕
+        </p>
+        <p class="signature">— With love, Your Child</p>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery" id="gallery">
+        <h2>Beautiful Memories 📸</h2>
+        <div class="photos">
+            <a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt="Memory 1"></a>
+            <a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt="Memory 2"></a>
+            <a href="photo3.jpg" target="_blank"><img src="photo3.jpg" alt="Memory 3"></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ for the best parents in the world</p>
+    </footer>
+
+    <!-- Fade-in Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+
+</body>
+</html>
